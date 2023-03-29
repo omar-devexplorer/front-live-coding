@@ -1,0 +1,417 @@
+<mat-progress-bar
+    mode="determinate"
+    [value]="scrolled"
+>
+
+</mat-progress-bar>
+
+<section id="question-section">
+
+    <form
+        class="form container y-mandatory"
+        [formGroup]="questionForm"
+        (scroll)="changeScrollPosition($event)"
+    >
+
+        <div class="wrapper">
+
+            <div
+                id="question-0"
+                class="question"
+            >
+
+                <div>
+
+                </div>
+
+                <h1>
+                    Entrevista Frontend Sr
+                </h1>
+
+                <button
+                    class="start-question-btn"
+                    mat-icon-button
+                    (click)="previousQuestion('question-1')"
+                >
+
+                    <mat-icon>arrow_circle_down</mat-icon>
+
+                </button>
+
+            </div>
+
+            <div
+                id="question-1"
+                class="question"
+            >
+
+                <h2>1- Cite 3 coisas que um dev precisa para ser/se tornar um desenvolvedor top?</h2>
+
+                <mat-form-field>
+
+                    <textarea
+                        matInput
+                        type="text"
+                        formControlName="question1"
+                        required
+                    ></textarea>
+
+                </mat-form-field>
+
+                <div class="action">
+
+                    <button
+                        mat-button
+                        (click)="previousQuestion('question-0')"
+                    >
+
+                        <mat-icon>keyboard_arrow_up</mat-icon>
+
+                        Voltar
+
+                    </button>
+
+                    <button
+                        mat-flat-button
+                        (click)="previousQuestion('question-2')"
+                    >
+
+                        Avançar
+
+                        <mat-icon>keyboard_arrow_down</mat-icon>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div
+                id="question-2"
+                class="question"
+            >
+
+                <h2>2- Cite 3 vantagens de Utilizar o framework Angular</h2>
+
+                <mat-form-field>
+
+                    <textarea
+                        matInput
+                        type="text"
+                        formControlName="question2"
+                        required
+                    ></textarea>
+
+                </mat-form-field>
+
+                <div class="action">
+
+                    <button
+                        mat-button
+                        (click)="previousQuestion('question-1')"
+                    >
+
+                        <mat-icon>keyboard_arrow_up</mat-icon>
+
+                        Voltar
+
+                    </button>
+
+                    <button
+                        mat-flat-button
+                        (click)="previousQuestion('question-3')"
+                    >
+
+                        Avançar
+
+                        <mat-icon>keyboard_arrow_down</mat-icon>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div
+                id="question-3"
+                class="question"
+            >
+
+                <h2>3- Cite 3 desvantagens de utilizar o framework Angular</h2>
+
+                <mat-form-field>
+
+                    <textarea
+                        matInput
+                        type="text"
+                        formControlName="question3"
+                        required
+                    ></textarea>
+
+                </mat-form-field>
+
+                <div class="action">
+
+                    <button
+                        mat-button
+                        (click)="previousQuestion('question-2')"
+                    >
+
+                        <mat-icon>keyboard_arrow_up</mat-icon>
+
+                        Voltar
+
+                    </button>
+
+                    <button
+                        mat-flat-button
+                        (click)="previousQuestion('question-4')"
+                    >
+
+                        Avançar
+
+                        <mat-icon>keyboard_arrow_down</mat-icon>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div
+                id="question-4"
+                class="question"
+            >
+
+                <h2>4- O que é Change Dectection e como ele funciona no Angular. Cite 1 forma de melhorar performance
+                    relacionada ao Change Detection.
+                </h2>
+
+                <mat-form-field>
+
+                    <textarea
+                        matInput
+                        type="text"
+                        formControlName="question4"
+                        required
+                    ></textarea>
+
+                </mat-form-field>
+
+                <div class="action">
+
+                    <button
+                        mat-button
+                        (click)="previousQuestion('question-3')"
+                    >
+
+                        <mat-icon>keyboard_arrow_up</mat-icon>
+
+                        Voltar
+
+                    </button>
+
+                    <button
+                        mat-flat-button
+                        (click)="previousQuestion('question-5')"
+                    >
+
+                        Avançar
+
+                        <mat-icon>keyboard_arrow_down</mat-icon>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div
+                id="question-5"
+                class="question"
+            >
+
+                <h2>
+                    5- O que é Dependency Injection e como ele funciona. Cite locais onde pode ele pode ser injetado.
+                </h2>
+
+                <mat-form-field>
+
+                    <textarea
+                        matInput
+                        type="text"
+                        formControlName="question5"
+                        required
+                    ></textarea>
+
+                </mat-form-field>
+
+                <div class="action">
+
+                    <button
+                        mat-button
+                        (click)="previousQuestion('question-4')"
+                    >
+
+                        <mat-icon>keyboard_arrow_up</mat-icon>
+
+                        Voltar
+
+                    </button>
+
+                    <button
+                        mat-flat-button
+                        (click)="previousQuestion('question-6')"
+                    >
+
+                        Avançar
+
+                        <mat-icon>keyboard_arrow_down</mat-icon>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div
+                id="question-6"
+                class="question"
+            >
+
+                <h2>
+                    6- Cite 3 formas de melhorar a performance da aplicação em geral.
+                </h2>
+
+                <mat-form-field>
+
+                    <textarea
+                        matInput
+                        type="text"
+                        formControlName="question6"
+                        required
+                    ></textarea>
+
+                </mat-form-field>
+
+                <div class="action">
+
+                    <button
+                        mat-button
+                        (click)="previousQuestion('question-5')"
+                    >
+
+                        <mat-icon>keyboard_arrow_up</mat-icon>
+
+                        Voltar
+
+                    </button>
+
+                    <button
+                        mat-flat-button
+                        (click)="previousQuestion('question-7')"
+                    >
+
+                        Avançar
+
+                        <mat-icon>keyboard_arrow_down</mat-icon>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div
+                id="question-7"
+                class="question"
+            >
+
+                <h2>7- Live Condig</h2>
+
+                <iframe
+                    [class.fullscreen]="fullscreen"
+                    width="100%"
+                    height="100%"
+                    src="https://stackblitz.com/github/omar-devexplorer/blogging/tree/main/frontend"
+                >
+
+                </iframe>
+
+                <div class="action">
+
+                    <button
+                        mat-button
+                        (click)="previousQuestion('question-6')"
+                    >
+
+                        <mat-icon>keyboard_arrow_up</mat-icon>
+
+                        Voltar
+
+                    </button>
+
+                    <button
+                        mat-flat-button
+                        (click)="previousQuestion('question-8')"
+                    >
+
+                        Avançar
+
+                        <mat-icon>keyboard_arrow_down</mat-icon>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div
+                id="question-8"
+                class="question"
+            >
+
+                <br>
+
+                <div class="action">
+
+                    <button
+                        mat-button
+                        (click)="previousQuestion('question-7')"
+                    >
+
+                        <mat-icon>keyboard_arrow_up</mat-icon>
+
+                        Voltar
+
+                    </button>
+
+                    <button
+                        mat-flat-button
+                        color="primary"
+                        [disabled]="questionForm.invalid"
+                        (click)="saveQuestion()"
+                    >
+
+                        ENVIAR <mat-icon class="material-icons-outlined">send</mat-icon>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </form>
+
+</section>
+
+<button
+    mat-fab
+    (click)="fullscreen = !fullscreen"
+>
+
+    <mat-icon>{{fullscreen ? 'fullscreen' : 'fullscreen_exit'}}</mat-icon>
+
+</button>

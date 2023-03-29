@@ -1,0 +1,18 @@
+.mat-drawer-container {
+  height: 100%;
+  overflow: hidden;
+}
+
+.mat-drawer-content {
+  position: relative;
+  overflow: hidden;
+}
+
+.mat-toolbar {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+
+  span {
+    justify-self: center;
+  }
+}

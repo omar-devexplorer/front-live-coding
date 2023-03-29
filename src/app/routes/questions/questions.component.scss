@@ -1,0 +1,130 @@
+@import "src/assets/styles/breakpoints.scss";
+
+:host {
+  position: relative;
+  height: 100%;
+  display: block;
+}
+
+.mat-flat-button,
+.mat-button {
+  padding: 0.25rem 1.5rem;
+  border-radius: 2rem;
+  color: #fff;
+}
+
+.mat-flat-button {
+  background-color: #7453a0;
+}
+
+#question-section {
+  .y-mandatory {
+    scroll-snap-type: y mandatory;
+  }
+
+  .container {
+    width: 100%;
+    height: calc(100vh - 64px);
+    padding: 0 7%;
+    display: grid;
+    place-items: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  .question {
+    width: 100%;
+    height: calc(100vh - 64px);
+    padding: 1rem 0;
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+
+    @include media-breakpoint(isHandset) {
+      gap: 0.5rem;
+    }
+  }
+
+  h1 {
+    align-self: flex-start;
+    text-align: center;
+    font-weight: 500;
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+    justify-self: flex-start;
+    align-self: flex-end;
+    font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+  }
+
+  .form {
+    display: grid;
+    place-items: center;
+
+    textarea {
+      height: 240px;
+    }
+
+    .mat-mdc-form-field {
+      align-self: flex-start;
+      width: 100%;
+      font-size: 1rem;
+    }
+  }
+}
+
+.action {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  place-items: center;
+}
+
+.col-2 {
+  width: 100%;
+
+  @include media-breakpoint(isWeb) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+  }
+}
+
+.start-question-btn {
+  transform: scale(1.25);
+}
+
+.mat-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  height: 8px;
+}
+
+.fullscreen {
+  position: fixed;
+  top: 64px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: calc(100% - 64px);
+  border: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  z-index: 99;
+}
+
+.mat-mdc-fab {
+  position: fixed;
+  bottom: 16px;
+  right: 32px;
+  z-index: 999;
+}
